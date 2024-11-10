@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="padre">
+
+  <section id="api-data">
+    <img src="https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg" class="image">
+    <audio #audioPlayer loop>
+      <source src="assets/GetYourGameOn.mp3" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
+    
+    <button (click)="playAudio(audioPlayer)">Play</button>
+    <button (click)="stopAudio(audioPlayer)">Stop</button>
+  </section>
+</div>
+<app-footer></app-footer>

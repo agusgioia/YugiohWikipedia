@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body {
+    background-color: #fff;
+    color: #333;
+    font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.margen-interno{
+    padding: 0 50px;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .header{
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            background: rgba(0,0,0,.1);
+            display: flex;
+            flex-flow: row nowrap;
+            height: 60px;
+            align-items: center;
+            border-bottom:1px solid rgba(255,255,255,.5);
+        }
+            .nav{
+                flex:5 1 auto;
+            }   
+                .nav a{
+                    color:black;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 2px;
+                }
+                .nav a:hover{
+                    color:#fff;
+                }
+    .image{
+        width: 100%;
+        height: 100%;
+    }            
+    .container{
+        position: relative;
+        width: 100%;
+        max-width: 100%; /* Ajusta el tamaño del contenedor según sea necesario */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+        .container img{
+            width: 100%;
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block;
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+        .overlay-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white; /* Color del texto */
+            text-align: center;
+            font-size: 24px; /* Tamaño del texto */
+            background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 10; /* Asegura que el texto esté por delante de la imagen */
+          }
+    footer {
+        background-color: #20232a;
+        color: #61dafb;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #333;
+      }
+  
+        footer h2 {
+            margin-top: 0;
+        }
+  
+        footer p {
+            margin: 5px 0;
+        }
+  
+        footer a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+  
+        footer a:hover {
+            text-decoration: underline;
+        }
+  
+        .footer-logo {
+            width: 100px;
+            height: auto;
+            margin: 10px 0;
+        }
+    

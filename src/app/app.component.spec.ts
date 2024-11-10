@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'YugiohWikipedia' title`, () => {
+  it(`should have the 'YugiohWiki' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('YugiohWikipedia');
+    expect(app.title).toEqual('YugiohWiki');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, YugiohWikipedia');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, YugiohWiki');
   });
 });
