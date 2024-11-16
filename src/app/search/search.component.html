@@ -1,14 +1,18 @@
 <app-header></app-header>
-<input type="text" [(ngModel)]="query" (ngModelChange)="search()" placeholder="Buscar carta...">
-<select (change)="selectCard($event)">
-  <option *ngFor="let card of searchResults" [value]="card.name">
-    {{ card.name }}
-  </option>
-</select>
-<div *ngIf="selectedCard">
-  <h2>{{ selectedCard.name }}</h2>
-  <img [src]="selectedCard.card_images[0].image_url" alt="{{ selectedCard.name }}">
-  <!-- Añade más información sobre la carta aquí -->
+<div class="padre" [ngClass]="{'card-selected': selectedCard}">
+  <img src="https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg" class="image">
+  <div class="content">
+    <input type="text" [(ngModel)]="query" (ngModelChange)="search()" placeholder="Buscar carta...">
+    <select (change)="selectCard($event)">
+      <option *ngFor="let card of searchResults" [value]="card.name">
+        {{ card.name }}
+      </option>
+    </select>
+    <div *ngIf="selectedCard" class="card-container">
+      <h2>{{ selectedCard.name }}</h2>
+      <img [src]="selectedCard.card_images[0].image_url" alt="{{ selectedCard.name }}">
+      <!-- Añade más información sobre la carta aquí -->
+    </div>
+  </div>
 </div>
-<img src="https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg" class="image">
 <app-footer></app-footer>

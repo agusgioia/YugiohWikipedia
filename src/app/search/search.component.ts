@@ -8,7 +8,7 @@ import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule, FormsModule,HeaderComponent,FooterComponent],
+  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })

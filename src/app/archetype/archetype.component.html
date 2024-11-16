@@ -1,17 +1,18 @@
 <app-header></app-header>
 <div class="padre">
-  <div id="result cardContainer">
-    <select id="archetypeList" [(ngModel)]="selectedArchetype" >
+  <img src="https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg" class="background-image">
+  <div id="resultContainer" class="content">
+    <select id="archetypeList" [(ngModel)]="selectedArchetype">
       <option value="">Selecciona un arquetipo</option>
       <option *ngFor="let archetype of archetypes" [value]="archetype.archetype_name">{{archetype.archetype_name}}</option>
     </select>
     
     <button (click)="fetchArchetypeCards()">Buscar Cartas</button>
+    
     <div *ngIf="cardNames">
       <h2>Cartas encontradas:</h2>
       <div [innerHTML]="cardNames"></div>
     </div>
-    <img src="https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg" class="image">
   </div>
 </div>
 <app-footer></app-footer>
