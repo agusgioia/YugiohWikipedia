@@ -1,17 +1,17 @@
 <app-header></app-header>
 <div class="all-cards">
-    <img src="https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg" class="background-image">
-    <div *ngFor="let card of cards; let i = index">
-      <div *ngIf="i % 3 === 0" class="row">
-        <div *ngFor="let subCard of cards.slice(i, i + 3)" class="card">
-          <h3>{{ subCard.name }}</h3>
-          <img [src]="getCardImageUrl(subCard.id)" [alt]="subCard.name" class="image">
-        </div>
+  <img src="https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg" class="background-image">
+  <div *ngFor="let card of cards; let i = index">
+    <div *ngIf="i % 3 === 0" class="row">
+      <div *ngFor="let subCard of cards.slice(i, i + 3)" class="card">
+        <h3>{{ subCard.name }}</h3>
+        <img [src]="getCardImageUrl(subCard.id)" [alt]="subCard.name" class="image">
       </div>
     </div>
-    <div class="pagination">
-      <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
-      <button (click)="nextPage()">Siguiente</button>
-    </div>
   </div>
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+    <button (click)="nextPage()">Siguiente</button>
+  </div>
+</div>
 <app-footer></app-footer>

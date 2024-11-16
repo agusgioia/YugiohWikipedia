@@ -1,46 +1,46 @@
 .all-cards {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .card {
-    margin: 10px;
-    text-align: center;
-    flex: 1;
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  button {
-    margin: 10px;
-    padding: 20px 40px;
-  }
-  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  margin: 10px;
+  text-align: center;
+  flex: 1 1 30%; /* Ajusta el tamaño mínimo del ancho de las cartas */
+  background-color: transparent; /* Fondo transparente */
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 20px 40px;
+}

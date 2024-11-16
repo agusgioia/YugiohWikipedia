@@ -1,0 +1,86 @@
+.padre {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* La imagen de fondo ocupará toda la altura de la ventana */
+    overflow: hidden; /* Para asegurarse de que nada se desborde fuera del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido vertical y horizontalmente */
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Coloca la imagen de fondo detrás de otros elementos */
+  }
+  
+  #result.cardContainer {
+    position: relative;
+    z-index: 1; /* Coloca el contenido por delante de la imagen */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para mayor legibilidad */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Ancho máximo para el contenedor */
+    text-align: center;
+  }
+  
+  #archetypeList {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
+    color: white; /* Texto blanco para contraste */
+    border: none; /* Quitar bordes */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 123, 255, 0.8); /* Fondo azul semi-transparente */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 86, 179, 0.8); /* Color al pasar el ratón por encima */
+  }
+  
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  

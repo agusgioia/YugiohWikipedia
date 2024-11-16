@@ -1,4 +1,28 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
-}
+    width: 100%;
+  }
+  
+  .nav a, .nav button {
+    flex: 1; /* Hacer que todos los elementos ocupen el mismo espacio */
+    text-align: center;
+    padding: 10px 15px; /* Ajusta el relleno según tus necesidades */
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    background: transparent; /* Fondo transparente */
+    border: none; /* Eliminar bordes */
+  }
+  
+  .nav button {
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav a:hover, .nav button:hover {
+    background-color: #0056b3; /* Color al pasar el ratón por encima */
+  }
+  
