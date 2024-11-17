@@ -30,12 +30,8 @@ export class AllCardsComponent implements OnInit {
 
   async loadAllCards() {
     try {
-<<<<<<< Updated upstream
-      this.cards = await this.allCardsService.getAllCards(this.currentPage);
-=======
       await this.allCardsService.fetchAllCards(); // Realiza una única petición
       this.updatePage();
->>>>>>> Stashed changes
     } catch (error) {
       console.error('Error fetching cards:', error);
     }

@@ -1,27 +1,29 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AllCardsService {
   private API_URL = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
-<<<<<<< Updated upstream
-=======
   private allCards: any[] = []; // Almacenar todas las cartas localmente
->>>>>>> Stashed changes
 
   constructor() { }
 
-  async getAllCards(page: number = 1) {
-    const offset = (page - 1) * 12;
+  async fetchAllCards() {
     try {
-      const response = await axios.get(this.API_URL, {
-        params: { num: 12, offset }
-      });
-      return response.data.data;
+      const response = await axios.get(this.API_URL);
+      this.allCards = response.data.data;
+      console.log(this.allCards)
+      return this.allCards;
     } catch (error) {
       console.error('Error fetching cards:', error);
       throw error;
     }
+  }
+
+  getCards(page: number = 1, pageSize: number = 12) {
+    const offset = (page - 1) * pageSize;
+    return this.allCards.slice(offset, offset + pageSize);
   }
 }
