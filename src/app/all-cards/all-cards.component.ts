@@ -29,7 +29,7 @@ export class AllCardsComponent implements OnInit {
 
   async fetchCards() {
     try {
-      this.cards = await this.allCardsService.getAllCards(this.currentPage);
+      this.cards = await this.allCardsService.getCards(this.currentPage);
     } catch (error) {
       console.error('Error fetching cards:', error);
     }
