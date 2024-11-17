@@ -28,7 +28,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 600px; /* Ancho máximo para el contenedor */
+    max-height: 95%;
+    max-width: 60%;
   }
   
   #archetypeList {
@@ -60,3 +61,21 @@
     margin-top: 20px;
   }
   
+  .card {
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 30%; /* Ajusta el tamaño mínimo del ancho de las cartas */
+    background-color: transparent; /* Fondo transparente */
+  }
+  
+  .image {
+    max-width: 60%;
+    height: auto;
+  }
+
+  .scroll-container {
+    max-height: 50vh; 
+    overflow-y: auto;  
+    width: 100%;
+    text-align: left;
+  }

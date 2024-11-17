@@ -5,6 +5,11 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from "../footer/footer.component";
 import { HeaderComponent } from '../header/header.component';
 
+interface Card {
+  id: number;
+  name: string;
+  card_images: Array<{ image_url: string }>;
+}
 
 @Component({
   selector: 'app-archetype',
@@ -14,10 +19,15 @@ import { HeaderComponent } from '../header/header.component';
   imports: [FormsModule, CommonModule, FooterComponent,HeaderComponent],
   providers:[ArchetypeService]
 })
+
+
+
 export class ArchetypeComponent implements OnInit {
   archetypes: any[] = [];
   selectedArchetype: string = '';
   cardNames: string = '';
+  idCards: number[] = [];
+  arquetypeCards: Card[] = [];
 
   constructor(private archetypeService: ArchetypeService) {}
 
@@ -58,6 +68,8 @@ export class ArchetypeComponent implements OnInit {
         console.log('Data received for cards:', data); // Para depuración
         if (Array.isArray(data.data) && data.data.length > 0) {
           this.cardNames = data.data.map((card: { name: string; }) => `<section>${card.name}</section>`).join('');
+          this.idCards = data.data.map( (card:{id:number;}) => `<section>${card.id} </section>`);
+          this.arquetypeCards = data.data;
         } else {
           this.cardNames = 'No se encontraron cartas para este arquetipo.';
         }
@@ -68,4 +80,9 @@ export class ArchetypeComponent implements OnInit {
       }
     });
   }
+
+  getCardImageUrl(cardId: number): string {
+    return `https://images.ygoprodeck.com/images/cards_small/${cardId}.jpg`;
+  }
+
 }  

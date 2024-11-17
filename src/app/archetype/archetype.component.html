@@ -9,9 +9,12 @@
     
     <button (click)="fetchArchetypeCards()">Buscar Cartas</button>
     
-    <div *ngIf="cardNames">
+    <div *ngIf="arquetypeCards" class="scroll-container">
       <h2>Cartas encontradas:</h2>
-      <div [innerHTML]="cardNames"></div>
+      <div *ngFor="let card of arquetypeCards" class="card"> 
+          <h3>{{card.name}}</h3>
+          <img [src]="getCardImageUrl(card.id)">
+      </div>
     </div>
   </div>
 </div>
