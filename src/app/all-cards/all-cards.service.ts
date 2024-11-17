@@ -5,6 +5,10 @@ import axios from 'axios';
 })
 export class AllCardsService {
   private API_URL = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
+<<<<<<< Updated upstream
+=======
+  private allCards: any[] = []; // Almacenar todas las cartas localmente
+>>>>>>> Stashed changes
 
   constructor() { }
 
