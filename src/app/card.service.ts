@@ -16,7 +16,7 @@ export class CardService {
   async getCards(name: string): Promise<Card[]> {
     try {
       const response = await axios.get<{ data: Card[] }>(this.apiUrl, {
-        params: { fname: name } // Utilizar 'fname' para buscar por fragmentos
+        params: { fname: name } 
       });
       return response.data.data;
     } catch (error) {
