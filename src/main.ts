@@ -10,8 +10,8 @@ bootstrapApplication(AppComponent,{
   providers:[
     provideRouter(routes),
     provideAuth0({
-      domain: 'dev-ev2qgw4if8es6e02.us.auth0.com',
-      clientId: 'cIPJWiQo76lyGuoVdd4sCcWw48cK4lPv',
+      domain: 'dev-oq2qwg67nvfwkcle.us.auth0.com',
+      clientId: 'cnmrO1vh7wdBZGgu5xizlyBIqTANM4Oy',
       authorizationParams: {
         redirect_uri: window.location.origin
       }
