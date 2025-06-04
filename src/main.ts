@@ -6,6 +6,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideAuth0} from '@auth0/auth0-angular';
 import { initializeApp } from "firebase/app";
 import { provideFirebaseApp } from '@angular/fire/app';
+
 const firebaseConfig = {
 
   apiKey: "AIzaSyDlMmWY9vFEhB1sdKTRfNgpprBvrLoALq0",
