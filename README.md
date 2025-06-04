@@ -4,8 +4,7 @@
 
 ## 🚀 Demo en vivo
 
-🔗[ Accedé a la aplicación aquí](https://yugiohwiki.netlify.app/home)]
-> Reemplazá con tu URL de Netlify real
+🔗[ Accedé a la aplicación aquí](https://yugiohwiki.netlify.app)]
 
 ## 📦 Tecnologías utilizadas
 
