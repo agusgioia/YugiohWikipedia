@@ -1,27 +1,54 @@
-# YugiohWikipedia
+# 🃏 Yugioh- Wikipedia - Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+**Yugioh- Wikipedia** es una aplicación web desarrollada con Angular que permite visualizar y explorar cartas del juego de cartas Yu-Gi-Oh! utilizando la [API oficial de YGOProDeck](https://ygoprodeck.com/api-guide/). La app está desplegada en Netlify para fácil acceso desde cualquier dispositivo.
 
-## Development server
+## 🚀 Demo en vivo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🔗[ Accedé a la aplicación aquí](https://yugiohwiki.netlify.app/home)]
+> Reemplazá con tu URL de Netlify real
 
-## Code scaffolding
+## 📦 Tecnologías utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17+
+- TypeScript
+- HTML / SCSS
+- YGOProDeck API
+- Netlify (para deployment)
 
-## Build
+## 🎯 Funcionalidades principales
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- 🔍 Búsqueda de cartas por nombre
+- 🔍 Búsqueda de cartas por arquetipo
+- 🖼️ Visualización de imágenes y detalles de cada carta
+- ⚡ Interfaz responsiva y rápida
 
-## Running unit tests
+## 🔧 Instalación local
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/tu-usuario/YugiohWikipedia.git
+cd YugiohWikipedia
+npm install
+ng serve
+```
 
-## Running end-to-end tests
+La app estará disponible en `http://localhost:4200`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🌐 Despliegue
 
-## Further help
+Este proyecto está desplegado automáticamente en Netlify con cada push al branch principal. Para configurar el deploy:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Crear una cuenta en [Netlify](https://www.netlify.com/)
+2. Conectar tu repo desde GitHub
+3. Usar los siguientes parámetros de build:
+   - Build Command: `ng build --configuration=production`
+   - Publish Directory: `dist/ygocard-viewer` (o el nombre real de tu proyecto)
+
+## 📄 Fuente de datos
+
+Todos los datos provienen de la [API de YGOProDeck](https://ygoprodeck.com/api-guide/).  
+Ejemplo de endpoint usado:
+
+```
+https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark Magician
+```
+
